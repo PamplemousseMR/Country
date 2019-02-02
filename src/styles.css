@@ -1,8 +1,2 @@
-* {
-    margin: 0;
-}
-
-body {
-    background-color: #313131;
-    font-family: AgencyRegular, Arial, serif;
-}
+@import "normalize.css/normalize.css";
+@import "~@angular/material/prebuilt-themes/indigo-pink.css";

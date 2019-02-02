@@ -1,7 +1,15 @@
-<div id="MenuComponent">
-  <ul>
-    <li>Accueil</li>
-    <li>Pays européens</li>
-    <li>Pays Africain</li>
-  </ul>
-</div>
+<mat-toolbar color="primary">
+    <a  routerLink="/" class="menu_button" mat-icon-button>
+        <mat-icon svgIcon="home"></mat-icon>
+    </a>
+    <a routerLink="/research" class="menu_button" mat-icon-button>
+        <mat-icon svgIcon="city"></mat-icon>
+    </a>
+    <span class="menu_spacer"></span>
+    <a class="menu_button" target="_blank" href="https://github.com/PamplemousseMR" mat-icon-button>
+        <mat-icon svgIcon="github-face"></mat-icon>
+    </a>
+    <a class="menu_button" target="_blank" href="https://fr.linkedin.com/in/romain-manciaux-21989810a" mat-icon-button>
+        <mat-icon svgIcon="linkedin"></mat-icon>
+    </a>
+</mat-toolbar>
