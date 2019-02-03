@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
+import { Link } from 'src/classes/link';
 
 @Component({
   selector: 'app-menu',
@@ -7,6 +8,9 @@ import { Component, OnInit } from '@angular/core';
 })
 
 export class MenuComponent implements OnInit {
+
+  @Input() m_localRoutes : Link[];
+  @Input() m_externalLinks : Link[];
 
   constructor() { }
 

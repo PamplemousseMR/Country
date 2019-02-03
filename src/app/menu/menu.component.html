@@ -1,15 +1,9 @@
 <mat-toolbar color="primary">
-    <a  routerLink="/" class="menu_link" mat-icon-button>
-        <mat-icon svgIcon="home"></mat-icon>
-    </a>
-    <a routerLink="/research" class="menu_link" mat-icon-button>
-        <mat-icon svgIcon="city"></mat-icon>
+    <a *ngFor="let l of m_localRoutes" routerLink="{{l.m_link}}" class="menu_link" mat-icon-button>
+        <mat-icon svgIcon="{{l.m_icon}}"></mat-icon>
     </a>
     <span class="menu_spacer"></span>
-    <a class="menu_link" target="_blank" href="https://github.com/PamplemousseMR" mat-icon-button>
-        <mat-icon svgIcon="github-face"></mat-icon>
-    </a>
-    <a class="menu_link" target="_blank" href="https://fr.linkedin.com/in/romain-manciaux-21989810a" mat-icon-button>
-        <mat-icon svgIcon="linkedin"></mat-icon>
+    <a *ngFor="let l of m_externalLinks" href="{{l.m_link}}" target="_blank" class="menu_link" mat-icon-button>
+        <mat-icon svgIcon="{{l.m_icon}}"></mat-icon>
     </a>
 </mat-toolbar>
