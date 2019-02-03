@@ -1,3 +1,8 @@
+import { Currency } from './currency';
+import { Language } from './language';
+import { Translations } from './translations';
+import { RegionalBlock } from './regionalBlock';
+
 export class Country {
 
     name : string;
@@ -18,11 +23,11 @@ export class Country {
     borders : string[];
     nativeName : string;
     numericCode : string;
-    currencies : string [];
-    languages : string [];
-    translations : string [];
+    currencies : Currency [];
+    languages : Language [];
+    translations : Translations;
     flag : string;
-    regionalBlocs : string [];
+    regionalBlocs : RegionalBlock [];
     cioc : string; 
        
 }
