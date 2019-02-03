@@ -13,6 +13,7 @@ import { HeaderComponent } from './header/header.component';
 import { MenuComponent } from './menu/menu.component';
 import { HomeComponent } from './home/home.component';
 import { ResearchComponent } from './research/research.component';
+import { FluxHeaderComponent } from './flux-header/flux-header.component';
 
 @NgModule({
   declarations: [
@@ -20,7 +21,8 @@ import { ResearchComponent } from './research/research.component';
     HeaderComponent,
     MenuComponent,
     HomeComponent,
-    ResearchComponent
+    ResearchComponent,
+    FluxHeaderComponent
   ],
   imports: [
     BrowserModule,

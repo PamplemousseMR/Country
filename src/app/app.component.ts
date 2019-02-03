@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { Link } from 'src/classes/link';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-root',
@@ -9,13 +10,13 @@ import { Link } from 'src/classes/link';
 
 export class AppComponent {
   
-  m_localRoutes : Link[] = [  new Link("/", "home"), 
+  m_localRoutes : Link[] = [  new Link("/home", "home"), 
                             new Link("/research", "city")];
 
   m_externalLinks : Link[] = [ new Link("https://github.com/PamplemousseMR", "github-face"),
                               new Link("https://fr.linkedin.com/in/romain-manciaux-21989810a", "linkedin")];
 
-  constructor() {
+  constructor(private i_router : Router) {
   }
 
  }
