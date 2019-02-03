@@ -49,6 +49,10 @@ import { MatInputModule } from '@angular/material/input';
 
 export class AppModule { 
   constructor(matIconRegistry: MatIconRegistry, domSanitizer: DomSanitizer){
-    matIconRegistry.addSvgIconSet(domSanitizer.bypassSecurityTrustResourceUrl('./assets/mdi.svg'));
+    matIconRegistry.addSvgIcon("home", domSanitizer.bypassSecurityTrustResourceUrl('./assets/home.svg'));
+    matIconRegistry.addSvgIcon("search", domSanitizer.bypassSecurityTrustResourceUrl('./assets/search.svg'));
+    matIconRegistry.addSvgIcon("github", domSanitizer.bypassSecurityTrustResourceUrl('./assets/github.svg'));
+    matIconRegistry.addSvgIcon("linkedin", domSanitizer.bypassSecurityTrustResourceUrl('./assets/linkedin.svg'));
+    matIconRegistry.addSvgIcon("earth", domSanitizer.bypassSecurityTrustResourceUrl('./assets/earth.svg'));
   }
 }
