@@ -1,13 +1,12 @@
-<div>
+<mat-toolbar class="research_research">
   <div class="research_spacer"></div>
-  <mat-form-field class="research_research" appearance="legacy">
-      <mat-label>Find a country</mat-label>
-      <input [(ngModel)]="m_country" matInput placeholder="Country">
-      <mat-icon matSuffix svgIcon="search"></mat-icon>
+  <mat-form-field class="research_input" appearance="legacy">
+    <mat-label>Find a country</mat-label>
+    <input [(ngModel)]="m_country" matInput placeholder="Country">
+    <mat-icon matSuffix svgIcon="search"></mat-icon>
   </mat-form-field>
-  <div class="research_spacer"></div>
-</div>
-<div *ngIf="m_countries">
+</mat-toolbar>
+<div class="research_expansion_panel" *ngIf="m_countries">
   <div *ngFor="let c of m_countries; let i = index">
     <div *ngIf="c.name.toLowerCase().includes(m_country.toLowerCase())">
       <mat-expansion-panel [expanded]="m_step === i" (opened)="setStep(i)">
@@ -23,7 +22,7 @@
           </mat-list-item>
           <mat-divider></mat-divider>
           <h3 mat-subheader>Details:</h3>
-          <mat-list-item >
+          <mat-list-item>
             <p mat-line>Region: {{c.region}}</p>
           </mat-list-item>
           <mat-list-item>

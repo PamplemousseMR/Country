@@ -9,10 +9,18 @@
 }
 
 .research_research {
-  padding-left: 40px;
+  height: 80px;
+  padding-top: 40px;
 }
 
 .research_spacer {
   flex: 1 1 auto;
-  height: 20px;
+}
+
+.research_input {
+  padding-right: 40px;
+}
+
+.research_expansion_panel {
+  padding: 24px;
 }
