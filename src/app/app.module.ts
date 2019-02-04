@@ -19,6 +19,7 @@ import { HomeComponent } from './home/home.component';
 import { ResearchComponent } from './research/research.component';
 import { FluxHeaderComponent } from './flux-header/flux-header.component';
 import { MatInputModule } from '@angular/material/input';
+import { FooterComponent } from './footer/footer.component';
 
 @NgModule({
   declarations: [
@@ -27,7 +28,8 @@ import { MatInputModule } from '@angular/material/input';
     MenuComponent,
     HomeComponent,
     ResearchComponent,
-    FluxHeaderComponent
+    FluxHeaderComponent,
+    FooterComponent
   ],
   imports: [
     BrowserModule,

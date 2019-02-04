@@ -3,4 +3,7 @@
     <app-menu [m_localRoutes]="m_localRoutes" [m_externalLinks]="m_externalLinks"></app-menu>
 </div>
 <app-flux-header *ngIf="i_router.url[1]" [m_title]="i_router.url[1].toUpperCase() + i_router.url.substring(2, i_router.url.length).toLowerCase()"></app-flux-header>
-<router-outlet></router-outlet>
+<div class="app-router">
+    <router-outlet></router-outlet>
+</div>
+<app-footer class="app-footer" m_name="Romain MANCIAUX"></app-footer>
