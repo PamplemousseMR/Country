@@ -1,18 +1,47 @@
 <mat-toolbar class="research_research">
   <div class="research_spacer"></div>
+  <mat-form-field class="research_selector">
+    <mat-select [(value)]="m_selected" placeholder="Research by">
+      <mat-option value="name">name</mat-option>
+      <mat-option value="name">name</mat-option>
+      <mat-option value="alpha2Code">alpha 2 Code</mat-option>
+      <mat-option value="alpha3Code">alpha 3 Code</mat-option>
+      <mat-option value="capital">capital</mat-option>
+      <mat-option value="region">region</mat-option>
+      <mat-option value="subregion">subregion</mat-option>
+      <mat-option value="population">population</mat-option>
+      <mat-option value="demonym">demonym</mat-option>
+      <mat-option value="area">area</mat-option>
+      <mat-option value="gini">gini</mat-option>
+      <mat-option value="nativeName">native name</mat-option>
+      <mat-option value="numericCode">numeric code</mat-option>
+      <mat-option value="cioc">cioc</mat-option>
+    </mat-select>
+  </mat-form-field>
   <mat-form-field class="research_input" appearance="legacy">
     <mat-label>Find a country</mat-label>
-    <input [(ngModel)]="m_country" matInput placeholder="Country">
+      <input [(ngModel)]="m_research" matInput placeholder="Country">
     <mat-icon matSuffix svgIcon="search"></mat-icon>
   </mat-form-field>
 </mat-toolbar>
 <div class="research_expansion_panel" *ngIf="m_countries">
   <div *ngFor="let c of m_countries; let i = index">
-    <div *ngIf="c.name.toLowerCase().includes(m_country.toLowerCase())">
+    <div *ngIf="c[m_selected] ? c[m_selected].toString().toLowerCase().includes(m_research.toLowerCase()) : false">
       <mat-expansion-panel [expanded]="m_step === i" (opened)="setStep(i)">
         <mat-expansion-panel-header>
           <mat-panel-title class="research_title">{{c.name}}</mat-panel-title>
-          <mat-panel-description class="research_description">Capital : {{c.capital}}</mat-panel-description>
+          <mat-panel-description *ngIf="m_selected === 'name' || m_selected === 'capital'" class="research_description">capital : {{c.capital}}</mat-panel-description>
+          <mat-panel-description *ngIf="m_selected === 'alpha2Code'" class="research_description">alpha 2 code : {{c.alpha2Code}}</mat-panel-description>
+          <mat-panel-description *ngIf="m_selected === 'alpha3Code'" class="research_description">alpha 3 code : {{c.alpha3Code}}</mat-panel-description>
+          <mat-panel-description *ngIf="m_selected === 'region'" class="research_description">region : {{c.region}}</mat-panel-description>
+          <mat-panel-description *ngIf="m_selected === 'subregion'" class="research_description">subregion : {{c.subregion}}</mat-panel-description>
+          <mat-panel-description *ngIf="m_selected === 'population'" class="research_description">population : {{c.population}}</mat-panel-description>
+          <mat-panel-description *ngIf="m_selected === 'demonym'" class="research_description">demonym : {{c.demonym}}</mat-panel-description>
+          <mat-panel-description *ngIf="m_selected === 'area'" class="research_description">area : {{c.area}}</mat-panel-description>
+          <mat-panel-description *ngIf="m_selected === 'gini'" class="research_description">gini : {{c.gini}}</mat-panel-description>
+          <mat-panel-description *ngIf="m_selected === 'nativeName'" class="research_description">native name : {{c.nativeName}}</mat-panel-description>
+          <mat-panel-description *ngIf="m_selected === 'numericCode'" class="research_description">numeric code : {{c.numericCode}}</mat-panel-description>
+          <mat-panel-description *ngIf="m_selected === 'cioc'" class="research_description">cioc : {{c.cioc}}</mat-panel-description>
         </mat-expansion-panel-header>
         <mat-list>
           <mat-divider></mat-divider>

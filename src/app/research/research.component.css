@@ -8,6 +8,10 @@
   align-items: center;
 }
 
+.research_selector {
+  padding-right: 40px;
+}
+
 .research_research {
   height: 80px;
   padding-top: 40px;

@@ -12,7 +12,9 @@ export class ResearchComponent implements OnInit {
 
   m_countries : Country[];
   m_step : number = -1;
-  m_country : string = "";
+
+  m_research : string = "";
+  m_selected : string = "name";
 
   constructor(private restcountries : RestcountriesService) {
     restcountries.getCountriesAll().subscribe(d =>
