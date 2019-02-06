@@ -11,7 +11,8 @@ import { Router } from '@angular/router';
 export class AppComponent {
   
   private readonly m_LOCALROUTES : Link[] = [  new Link("/home", "home"), 
-                            new Link("/research", "earth")];
+                            new Link("/research", "earth"),
+                            new Link("/detail/null", "detail")];
 
   private readonly m_EXTERNALLINKS : Link[] = [ new Link("https://github.com/PamplemousseMR", "github"),
                               new Link("https://fr.linkedin.com/in/romain-manciaux-21989810a", "linkedin")];

@@ -21,6 +21,7 @@ import { ResearchComponent } from './research/research.component';
 import { FluxHeaderComponent } from './flux-header/flux-header.component';
 import { MatInputModule } from '@angular/material/input';
 import { FooterComponent } from './footer/footer.component';
+import { DetailComponent } from './detail/detail.component';
 
 @NgModule({
   declarations: [
@@ -30,7 +31,8 @@ import { FooterComponent } from './footer/footer.component';
     HomeComponent,
     ResearchComponent,
     FluxHeaderComponent,
-    FooterComponent
+    FooterComponent,
+    DetailComponent
   ],
   imports: [
     BrowserModule,
@@ -58,5 +60,6 @@ export class AppModule {
     matIconRegistry.addSvgIcon("github", domSanitizer.bypassSecurityTrustResourceUrl('./assets/github.svg'));
     matIconRegistry.addSvgIcon("linkedin", domSanitizer.bypassSecurityTrustResourceUrl('./assets/linkedin.svg'));
     matIconRegistry.addSvgIcon("earth", domSanitizer.bypassSecurityTrustResourceUrl('./assets/earth.svg'));
+    matIconRegistry.addSvgIcon("detail", domSanitizer.bypassSecurityTrustResourceUrl('./assets/detail.svg'));
   }
 }
