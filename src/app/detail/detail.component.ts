@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { RestcountriesService } from 'src/services/restcountries.service';
 import { CountryDetail } from 'src/classes/countryDetail';
 import { ActivatedRoute } from '@angular/router';
+import { FormGroup, } from '@angular/forms';
 
 @Component({
   selector: 'app-detail',
@@ -10,6 +11,7 @@ import { ActivatedRoute } from '@angular/router';
 })
 export class DetailComponent implements OnInit {
 
+  private readonly m_KEYS :string[] = Object.keys(new CountryDetail);
   private m_country : CountryDetail;
 
   constructor(private restcountries : RestcountriesService, private route: ActivatedRoute) {

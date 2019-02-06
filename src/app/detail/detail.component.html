@@ -1,1 +1,79 @@
-<p>{{m_country.name}}</p>
+<mat-card *ngIf="m_country" class="detail_card">
+  <mat-card-header class="detail_header">
+    <mat-card-title>{{m_country.name}}</mat-card-title>
+    <mat-card-subtitle>{{m_country.capital}}</mat-card-subtitle>
+  </mat-card-header>
+  <img mat-card-image class="detail_image" src="{{m_country.flag}}" alt="Photo of the {{m_country.name}} flag">
+  <mat-card-content>
+    <mat-tab-group>
+      <mat-tab label="Generals informations">
+        <mat-grid-list cols="2" rowHeight="1:1">
+          <mat-grid-tile>
+            <mat-list role="list">
+              <mat-list-item role="listitem">name : {{m_country.name}}</mat-list-item>
+              <mat-list-item role="listitem">capital : {{m_country.capital}}</mat-list-item>
+              <mat-list-item role="listitem">alpha 2 code : {{m_country.alpha2Code}}</mat-list-item>
+              <mat-list-item role="listitem">alpha 3 code : {{m_country.alpha3Code}}</mat-list-item>
+              <mat-list-item role="listitem">cioc : {{m_country.cioc}}</mat-list-item>
+            </mat-list>
+          </mat-grid-tile>
+          <mat-grid-tile>
+            <mat-list role="list">
+              <mat-list-item role="listitem">region : {{m_country.region}}</mat-list-item>
+              <mat-list-item role="listitem">subregion : {{m_country.subregion}}</mat-list-item>
+              <mat-list-item role="listitem">demonym : {{m_country.demonym}}</mat-list-item>
+              <mat-list-item role="listitem">native name : {{m_country.nativeName}}</mat-list-item>
+            </mat-list>
+          </mat-grid-tile>
+        </mat-grid-list>
+      </mat-tab>
+      <mat-tab label="Numbers">
+        <mat-grid-list cols="2" rowHeight="1:1">
+          <mat-grid-tile>
+            <mat-list role="list">
+              <mat-list-item role="listitem">area : {{m_country.area}}</mat-list-item>
+              <mat-list-item role="listitem">cioc : {{m_country.cioc}}</mat-list-item>
+            </mat-list>
+          </mat-grid-tile>
+          <mat-grid-tile>
+            <mat-list role="list">
+              <mat-list-item role="listitem">gini : {{m_country.gini}}</mat-list-item>
+              <mat-list-item role="listitem">numeric code : {{m_country.numericCode}}</mat-list-item>
+            </mat-list>
+          </mat-grid-tile>
+        </mat-grid-list>
+      </mat-tab>
+      <mat-tab label="Details">
+        <mat-list role="list">
+          <mat-list-item role="listitem">
+            <div>top level domain : </div>
+            <div class="detail_details" *ngFor="let s of m_country.topLevelDomain">{{s}}</div>
+          </mat-list-item>
+          <mat-list-item role="listitem">
+            <div>calling codes : </div>
+            <div class="detail_details" *ngFor="let s of m_country.callingCodes">{{s}}</div>
+          </mat-list-item>
+          <mat-list-item role="listitem">
+            <div>alt spellings : </div>
+            <div class="detail_details" *ngFor="let s of m_country.altSpellings">{{s}}</div>
+          </mat-list-item>
+          <mat-list-item role="listitem">
+            <div>latitude/longitude : </div>
+            <div class="detail_details" *ngFor="let s of m_country.latlng">{{s}}</div>
+          </mat-list-item>
+          <mat-list-item role="listitem">
+            <div>timezones : </div>
+            <div class="detail_details" *ngFor="let s of m_country.timezones">{{s}}</div>
+          </mat-list-item>
+          <mat-list-item role="listitem">
+            <div>borders : </div>
+            <a mat-button class="detail_details" *ngFor="let s of m_country.borders" routerLink="/detail/{{s}}">{{s}}</a>
+          </mat-list-item>
+        </mat-list>
+      </mat-tab>
+    </mat-tab-group>
+  </mat-card-content>
+  <mat-card-actions>
+    <button mat-button routerLink="/research" color="warn">Go back</button>
+  </mat-card-actions>
+</mat-card>
