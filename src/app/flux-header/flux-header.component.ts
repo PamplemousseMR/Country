@@ -5,9 +5,10 @@ import { Component, OnInit, Input } from '@angular/core';
   templateUrl: './flux-header.component.html',
   styleUrls: ['./flux-header.component.css']
 })
+
 export class FluxHeaderComponent implements OnInit {
 
-  @Input() m_title : string = "default";
+  @Input() private readonly m_TITLE : string = "default";
 
   constructor() { }
 

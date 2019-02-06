@@ -2,12 +2,12 @@
   <div class="research_spacer"></div>
   <mat-form-field class="research_selector">
     <mat-select [(value)]="m_selected" placeholder="Research by">
-      <mat-option *ngFor="let k of m_keys" value="{{k}}">{{k}}</mat-option>
+      <mat-option *ngFor="let k of m_KEYS" value="{{k}}">{{k}}</mat-option>
     </mat-select>
   </mat-form-field>
   <mat-form-field class="research_input" appearance="legacy">
     <mat-label>Research</mat-label>
-      <input matInput [(ngModel)]="m_research" placeholder="...">
+      <input matInput [(ngModel)]="m_research" placeholder="m_selected">
     <mat-icon matSuffix svgIcon="search"></mat-icon>
   </mat-form-field>
 </mat-toolbar>
@@ -17,7 +17,7 @@
       <mat-expansion-panel [expanded]="m_step === i" (opened)="setStep(i)">
         <mat-expansion-panel-header>
           <mat-panel-title class="research_title">{{c.name}}</mat-panel-title>
-          <mat-panel-description *ngIf="m_selected !== m_keys[0]" class="research_description">{{m_selected}} : {{c[m_selected]}}</mat-panel-description>
+          <mat-panel-description *ngIf="m_selected !== m_KEYS[0]" class="research_description">{{m_selected}} : {{c[m_selected]}}</mat-panel-description>
         </mat-expansion-panel-header>
         <mat-list>
           <mat-divider></mat-divider>

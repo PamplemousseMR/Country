@@ -10,11 +10,11 @@ import { Country } from 'src/classes/country';
 
 export class ResearchComponent implements OnInit {
 
-  m_keys :string[] = Object.keys(new Country);
-  m_selected : string = this.m_keys[0];
-  m_research : string = "";
-  m_step : number = -1;
-  m_objects : Country[];
+  private readonly m_KEYS :string[] = Object.keys(new Country);
+  private m_selected : string = this.m_KEYS[0];
+  private m_research : string = "";
+  private m_step : number = -1;
+  private m_objects : Country[];
 
   constructor(private restcountries : RestcountriesService) {
     restcountries.getCountriesAll().subscribe(d =>

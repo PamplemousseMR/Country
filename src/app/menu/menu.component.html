@@ -1,9 +1,9 @@
 <mat-toolbar color="primary">
-    <a *ngFor="let l of m_localRoutes" routerLink="{{l.m_link}}" class="menu_link" mat-icon-button>
+    <a *ngFor="let l of m_LOCALROUTES" routerLink="{{l.m_link}}" class="menu_link" mat-icon-button>
         <mat-icon svgIcon="{{l.m_icon}}"></mat-icon>
     </a>
     <span class="menu_spacer"></span>
-    <a *ngFor="let l of m_externalLinks" href="{{l.m_link}}" target="_blank" class="menu_link" mat-icon-button>
+    <a *ngFor="let l of m_EXTERNALLINKS" href="{{l.m_link}}" target="_blank" class="menu_link" mat-icon-button>
         <mat-icon svgIcon="{{l.m_icon}}"></mat-icon>
     </a>
 </mat-toolbar>

@@ -8,7 +8,7 @@ import { Component, OnInit, Input } from '@angular/core';
 
 export class HeaderComponent implements OnInit {
 
-  @Input() m_title : string = "default";
+  @Input() private readonly m_TITLE : string = "default";
 
   constructor() {}
 
