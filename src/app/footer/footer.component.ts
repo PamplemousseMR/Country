@@ -8,6 +8,7 @@ import { Component, OnInit, Input } from '@angular/core';
 export class FooterComponent implements OnInit {
 
   @Input() m_name : String = "default";
+  
   m_date : Date = new Date();
 
   constructor() { }
