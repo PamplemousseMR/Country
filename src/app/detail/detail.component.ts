@@ -15,12 +15,18 @@ export class DetailComponent implements OnInit {
   private m_country : CountryDetail;
 
   constructor(private restcountries : RestcountriesService, private route: ActivatedRoute) {
-    restcountries.getCountry(this.route.snapshot.paramMap.get('name')).subscribe(
+    this.restcountries.getCountry(this.route.snapshot.paramMap.get('name')).subscribe(
       d => this.m_country = d
     );
    }
 
   ngOnInit() {
+  }
+
+  redirect(_code : string) {
+    this.restcountries.getCountry(_code).subscribe(
+      d => this.m_country = d
+    );
   }
 
 }

@@ -67,7 +67,7 @@
           </mat-list-item>
           <mat-list-item role="listitem">
             <div>borders : </div>
-            <a mat-button class="detail_details" *ngFor="let s of m_country.borders" routerLink="/detail/{{s}}">{{s}}</a>
+            <a mat-button class="detail_details" *ngFor="let s of m_country.borders" (click)="redirect(s)">{{s}}</a>
           </mat-list-item>
         </mat-list>
       </mat-tab>
