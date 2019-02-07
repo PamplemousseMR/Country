@@ -1,6 +1,5 @@
 <div *ngIf="m_objects">
   <mat-toolbar class="research_research">
-    <div class="research_spacer"></div>
     <mat-form-field class="research_selector">
       <mat-select [(value)]="m_selected" placeholder="Research by">
         <mat-option *ngFor="let k of m_KEYS" value="{{k}}">{{k}}</mat-option>
@@ -17,10 +16,8 @@
       <div *ngIf="c[m_selected] ? c[m_selected].toString().toLowerCase().includes(m_research.toLowerCase()) : false">
         <mat-card class="example-card">
           <mat-card-header>
-            <mat-card-title>{{c.name}}</mat-card-title>
-            <mat-card-subtitle *ngIf="m_selected !== m_KEYS[0]">{{m_selected}} : {{c[m_selected]}}</mat-card-subtitle>
-            <div class="research_spacer"></div>
-            <button class="research_button" mat-button routerLink="/detail/{{c.alpha3Code}}">INFORMATIONS</button>
+            <mat-card-title><a mat-button routerLink="/detail/{{c.alpha3Code}}">{{c.name}}</a></mat-card-title>
+            <mat-card-subtitle class="research_subtitle" *ngIf="m_selected !== m_KEYS[0]">{{m_selected}} : {{c[m_selected]}}</mat-card-subtitle>
           </mat-card-header>
         </mat-card>
       </div>
