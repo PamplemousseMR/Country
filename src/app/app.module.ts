@@ -11,6 +11,9 @@ import { MatListModule } from '@angular/material/list';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatSelectModule } from '@angular/material/select';
 import { MatGridListModule } from '@angular/material/grid-list';
+import { MatCardModule } from '@angular/material/card';
+import { MatTabsModule } from '@angular/material/tabs';
+import { MatInputModule } from '@angular/material/input';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -19,11 +22,9 @@ import { MenuComponent } from './generic/menu/menu.component';
 import { HomeComponent } from './generic/home/home.component';
 import { ResearchComponent } from './research/research.component';
 import { FluxHeaderComponent } from './generic/flux-header/flux-header.component';
-import { MatInputModule } from '@angular/material/input';
 import { FooterComponent } from './generic/footer/footer.component';
 import { DetailComponent } from './detail/detail.component';
-import { MatCardModule } from '@angular/material/card';
-import { MatTabsModule } from '@angular/material/tabs';
+import { DeadlinkComponent } from './generic/deadlink/deadlink.component';
 
 @NgModule({
   declarations: [
@@ -34,7 +35,8 @@ import { MatTabsModule } from '@angular/material/tabs';
     ResearchComponent,
     FluxHeaderComponent,
     FooterComponent,
-    DetailComponent
+    DetailComponent,
+    DeadlinkComponent
   ],
   imports: [
     BrowserModule,
