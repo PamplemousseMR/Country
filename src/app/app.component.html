@@ -2,7 +2,7 @@
     <app-header m_TITLE="Country"></app-header>
     <app-menu [m_LOCALROUTES]="m_LOCALROUTES" [m_EXTERNALLINKS]="m_EXTERNALLINKS"></app-menu>
 </div>
-<app-flux-header *ngIf="i_router.url[1]" [m_TITLE]="i_router.url.substring(1, i_router.url.length).toLowerCase() | titlecase"></app-flux-header>
+<app-flux-header *ngIf="i_router.url[1]" [m_TITLE]="(i_router.url.substring(1, i_router.url.length).toLowerCase() | titlecase).split('/')[0]"></app-flux-header>
 <div class="app-router">
     <router-outlet></router-outlet>
 </div>
