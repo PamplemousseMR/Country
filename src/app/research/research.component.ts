@@ -17,8 +17,9 @@ export class ResearchComponent implements OnInit {
   private m_objects : Country[];
 
   constructor(private restcountries : RestcountriesService) {
-    restcountries.getCountriesAll().subscribe(d =>
-      this.m_objects = d)
+    restcountries.getCountriesAll().subscribe(
+      d => this.m_objects = d
+    );
    }
 
   ngOnInit() {
