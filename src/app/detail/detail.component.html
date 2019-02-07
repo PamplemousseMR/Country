@@ -19,8 +19,8 @@
           </mat-grid-tile>
           <mat-grid-tile>
             <mat-list role="list">
-              <mat-list-item role="listitem">region : {{m_country.region}}</mat-list-item>
-              <mat-list-item role="listitem">subregion : {{m_country.subregion}}</mat-list-item>
+              <mat-list-item role="listitem">region : <a mat-button routerLink="/research/region/{{m_country.region}}">{{m_country.region}}</a></mat-list-item>
+              <mat-list-item role="listitem">subregion : <a mat-button routerLink="/research/subregion/{{m_country.subregion}}">{{m_country.subregion}}</a></mat-list-item>
               <mat-list-item role="listitem">demonym : {{m_country.demonym}}</mat-list-item>
               <mat-list-item role="listitem">native name : {{m_country.nativeName}}</mat-list-item>
             </mat-list>

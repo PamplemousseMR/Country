@@ -1,6 +1,7 @@
 import { Component, OnInit, Input } from '@angular/core';
 import { RestcountriesService } from 'src/services/restcountries.service';
 import { Country } from 'src/classes/country';
+import { ActivatedRoute } from '@angular/router';
 
 @Component({
   selector: 'app-research',
@@ -15,10 +16,14 @@ export class ResearchComponent implements OnInit {
   private m_research : string = "";
   private m_objects : Country[];
 
-  constructor(private restcountries : RestcountriesService) {
-    this.restcountries.getCountriesAll().subscribe(
+  constructor(private m_restcountries : RestcountriesService, private m_route: ActivatedRoute) {
+    this.m_restcountries.getCountriesAll().subscribe(
       d => this.m_objects = d
     );
+    if(this.m_route.snapshot.paramMap.get('selected') && this.m_route.snapshot.paramMap.get('research')) {
+      this.m_selected = this.m_route.snapshot.paramMap.get('selected');
+      this.m_research = this.m_route.snapshot.paramMap.get('research');
+    }
    }
 
   ngOnInit() {

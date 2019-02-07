@@ -14,8 +14,8 @@ export class DetailComponent implements OnInit {
   private readonly m_KEYS :string[] = Object.keys(new CountryDetail);
   private m_country : CountryDetail;
 
-  constructor(private restcountries : RestcountriesService, private route: ActivatedRoute) {
-    this.restcountries.getCountry(this.route.snapshot.paramMap.get('name')).subscribe(
+  constructor(private m_restcountries : RestcountriesService, private m_route: ActivatedRoute) {
+    this.m_restcountries.getCountry(this.m_route.snapshot.paramMap.get('name')).subscribe(
       d => this.m_country = d
     );
    }
@@ -24,7 +24,7 @@ export class DetailComponent implements OnInit {
   }
 
   redirect(_code : string) {
-    this.restcountries.getCountry(_code).subscribe(
+    this.m_restcountries.getCountry(_code).subscribe(
       d => this.m_country = d
     );
   }
