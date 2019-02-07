@@ -13,7 +13,6 @@ export class ResearchComponent implements OnInit {
   private readonly m_KEYS :string[] = Object.keys(new Country);
   private m_selected : string = this.m_KEYS[0];
   private m_research : string = "";
-  private m_step : number = -1;
   private m_objects : Country[];
 
   constructor(private restcountries : RestcountriesService) {
@@ -23,18 +22,6 @@ export class ResearchComponent implements OnInit {
    }
 
   ngOnInit() {
-  }
-
-  setStep(index: number) {
-    this.m_step = index;
-  }
-
-  nextStep() {
-    this.m_step++;
-  }
-
-  prevStep() {
-    this.m_step--;
   }
 
 }

@@ -1,13 +1,3 @@
-.research_title,
-.research_description {
-  flex-basis: 0;
-}
-
-.research_description {
-  justify-content: space-between;
-  align-items: center;
-}
-
 .research_selector {
   padding-right: 40px;
 }
@@ -25,6 +15,12 @@
   padding-right: 40px;
 }
 
-.research_expansion_panel {
+.research_panel {
   padding: 24px;
+}
+
+.research_detail {
+  display: inline;
+  margin-left: 20px; 
+  font-size: 12px;
 }

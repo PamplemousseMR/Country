@@ -8,38 +8,21 @@
     </mat-form-field>
     <mat-form-field class="research_input" appearance="legacy">
       <mat-label>Research</mat-label>
-        <input matInput [(ngModel)]="m_research" placeholder="m_selected">
+        <input matInput [(ngModel)]="m_research" placeholder="{{m_selected}}">
       <mat-icon matSuffix svgIcon="search"></mat-icon>
     </mat-form-field>
   </mat-toolbar>
-  <div class="research_expansion_panel" *ngIf="m_objects">
+  <div class="research_panel" *ngIf="m_objects">
     <div *ngFor="let c of m_objects; let i = index">
       <div *ngIf="c[m_selected] ? c[m_selected].toString().toLowerCase().includes(m_research.toLowerCase()) : false">
-        <mat-expansion-panel [expanded]="m_step === i" (opened)="setStep(i)">
-          <mat-expansion-panel-header>
-            <mat-panel-title class="research_title">{{c.name}}</mat-panel-title>
-            <mat-panel-description *ngIf="m_selected !== m_KEYS[0]" class="research_description">{{m_selected}} : {{c[m_selected]}}</mat-panel-description>
-          </mat-expansion-panel-header>
-          <mat-list>
-            <mat-divider></mat-divider>
-            <h3 mat-subheader>Native name:</h3>
-            <mat-list-item>
-              <p mat-line>{{c.nativeName}}</p>
-            </mat-list-item>
-            <h3 mat-subheader>Details:</h3>
-            <mat-list-item>
-              <p mat-line>Region: {{c.region}}</p>
-            </mat-list-item>
-            <mat-list-item>
-              <p mat-line>Subregion: {{c.subregion}}</p>
-            </mat-list-item>
-          </mat-list>
-          <mat-action-row>
-            <button mat-button color="warn" (click)="prevStep()">Previous</button>
-            <button mat-button color="accent" routerLink="/detail/{{c.alpha3Code}}">Informations</button>
-            <button mat-button color="primary" (click)="nextStep()">Next</button>
-          </mat-action-row>
-        </mat-expansion-panel>
+        <mat-card class="example-card">
+          <mat-card-header>
+            <mat-card-title>{{c.name}}</mat-card-title>
+            <mat-card-subtitle *ngIf="m_selected !== m_KEYS[0]">{{m_selected}} : {{c[m_selected]}}</mat-card-subtitle>
+            <div class="research_spacer"></div>
+            <button class="research_button" mat-button routerLink="/detail/{{c.alpha3Code}}">INFORMATIONS</button>
+          </mat-card-header>
+        </mat-card>
       </div>
     </div>
   </div>
