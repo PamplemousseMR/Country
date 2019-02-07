@@ -5,19 +5,19 @@
         <mat-option *ngFor="let k of m_KEYS" value="{{k}}">{{k}}</mat-option>
       </mat-select>
     </mat-form-field>
-    <mat-form-field class="research_input" appearance="legacy">
+    <mat-form-field appearance="legacy" class="research_input">
       <mat-label>Research</mat-label>
-        <input matInput [(ngModel)]="m_research" placeholder="{{m_selected}}">
+      <input [(ngModel)]="m_research" matInput placeholder="{{m_selected}}">
       <mat-icon matSuffix svgIcon="search"></mat-icon>
     </mat-form-field>
   </mat-toolbar>
-  <div class="research_panel" *ngIf="m_objects">
+  <div *ngIf="m_objects" class="research_panel">
     <div *ngFor="let c of m_objects; let i = index">
       <div *ngIf="c[m_selected] ? c[m_selected].toString().toLowerCase().includes(m_research.toLowerCase()) : false">
         <mat-card class="example-card">
           <mat-card-header>
             <mat-card-title><a mat-button routerLink="/detail/{{c.alpha3Code}}">{{c.name}}</a></mat-card-title>
-            <mat-card-subtitle class="research_subtitle" *ngIf="m_selected !== m_KEYS[0]">{{m_selected}} : {{c[m_selected]}}</mat-card-subtitle>
+            <mat-card-subtitle *ngIf="m_selected !== m_KEYS[0]" class="research_subtitle">{{m_selected}} : {{c[m_selected]}}</mat-card-subtitle>
           </mat-card-header>
         </mat-card>
       </div>

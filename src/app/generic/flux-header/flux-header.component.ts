@@ -1,4 +1,4 @@
-import { Component, OnInit, Input } from '@angular/core';
+import {Component, Input, OnInit} from '@angular/core';
 
 @Component({
   selector: 'app-flux-header',
@@ -8,9 +8,10 @@ import { Component, OnInit, Input } from '@angular/core';
 
 export class FluxHeaderComponent implements OnInit {
 
-  @Input() private readonly m_TITLE : string = "default";
+  @Input() private readonly m_TITLE: string = "default";
 
-  constructor() { }
+  constructor() {
+  }
 
   ngOnInit() {
   }

@@ -1,8 +1,8 @@
-import { Component, OnInit } from '@angular/core';
-import { RestcountriesService } from 'src/services/restcountries.service';
-import { CountryDetail } from 'src/classes/countryDetail';
-import { ActivatedRoute } from '@angular/router';
-import { FormGroup, } from '@angular/forms';
+import {Component, OnInit} from '@angular/core';
+import {RestcountriesService} from 'src/services/restcountries.service';
+import {CountryDetail} from 'src/classes/countryDetail';
+import {ActivatedRoute} from '@angular/router';
+import {FormGroup,} from '@angular/forms';
 
 @Component({
   selector: 'app-detail',
@@ -11,19 +11,19 @@ import { FormGroup, } from '@angular/forms';
 })
 export class DetailComponent implements OnInit {
 
-  private readonly m_KEYS :string[] = Object.keys(new CountryDetail);
-  private m_country : CountryDetail;
+  private readonly m_KEYS: string[] = Object.keys(new CountryDetail);
+  private m_country: CountryDetail;
 
-  constructor(private m_restcountries : RestcountriesService, private m_route: ActivatedRoute) {
+  constructor(private m_restcountries: RestcountriesService, private m_route: ActivatedRoute) {
     this.m_restcountries.getCountry(this.m_route.snapshot.paramMap.get('name')).subscribe(
       d => this.m_country = d
     );
-   }
+  }
 
   ngOnInit() {
   }
 
-  redirect(_code : string) {
+  redirect(_code: string) {
     this.m_restcountries.getCountry(_code).subscribe(
       d => this.m_country = d
     );

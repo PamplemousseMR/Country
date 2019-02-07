@@ -1,8 +1,8 @@
 .menu_link {
-    margin: 0 20px 15px;
-    transform: scale(1.5);
+  margin: 0 20px 15px;
+  transform: scale(1.5);
 }
 
 .menu_spacer {
-    flex: 1 1 auto;
+  flex: 1 1 auto;
 }

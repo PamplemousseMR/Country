@@ -1,6 +1,6 @@
-import { async, ComponentFixture, TestBed } from '@angular/core/testing';
+import {async, ComponentFixture, TestBed} from '@angular/core/testing';
 
-import { FluxHeaderComponent } from './flux-header.component';
+import {FluxHeaderComponent} from './flux-header.component';
 
 describe('FluxHeaderComponent', () => {
   let component: FluxHeaderComponent;
@@ -8,9 +8,9 @@ describe('FluxHeaderComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ FluxHeaderComponent ]
+      declarations: [FluxHeaderComponent]
     })
-    .compileComponents();
+      .compileComponents();
   }));
 
   beforeEach(() => {

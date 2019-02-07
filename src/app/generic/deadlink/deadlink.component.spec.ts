@@ -1,6 +1,6 @@
-import { async, ComponentFixture, TestBed } from '@angular/core/testing';
+import {async, ComponentFixture, TestBed} from '@angular/core/testing';
 
-import { DeadlinkComponent } from './deadlink.component';
+import {DeadlinkComponent} from './deadlink.component';
 
 describe('DeadlinkComponent', () => {
   let component: DeadlinkComponent;
@@ -8,9 +8,9 @@ describe('DeadlinkComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ DeadlinkComponent ]
+      declarations: [DeadlinkComponent]
     })
-    .compileComponents();
+      .compileComponents();
   }));
 
   beforeEach(() => {

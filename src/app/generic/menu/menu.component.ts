@@ -1,5 +1,5 @@
-import { Component, OnInit, Input } from '@angular/core';
-import { Link } from 'src/classes/link';
+import {Component, Input, OnInit} from '@angular/core';
+import {Link} from 'src/classes/link';
 
 @Component({
   selector: 'app-menu',
@@ -9,10 +9,11 @@ import { Link } from 'src/classes/link';
 
 export class MenuComponent implements OnInit {
 
-  @Input() private readonly m_LOCALROUTES : Link[];
-  @Input() private readonly m_EXTERNALLINKS : Link[];
+  @Input() private readonly m_LOCALROUTES: Link[];
+  @Input() private readonly m_EXTERNALLINKS: Link[];
 
-  constructor() { }
+  constructor() {
+  }
 
   ngOnInit() {
   }

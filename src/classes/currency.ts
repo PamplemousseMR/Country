@@ -1,7 +1,7 @@
 export class Currency {
 
-    code : string = "";
-    name : string = "";
-    symbol : string = "";
-       
+  code: string = "";
+  name: string = "";
+  symbol: string = "";
+
 }
