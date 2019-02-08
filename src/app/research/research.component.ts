@@ -17,6 +17,9 @@ export class ResearchComponent implements OnInit {
   private m_objects: Country[];
 
   constructor(private m_restcountries: RestcountriesService, private m_route: ActivatedRoute) {
+  }
+
+  ngOnInit() {
     this.m_restcountries.getCountriesAll().subscribe(
       d => this.m_objects = d
     );
@@ -24,9 +27,6 @@ export class ResearchComponent implements OnInit {
       this.m_selected = this.m_route.snapshot.paramMap.get('selected');
       this.m_research = this.m_route.snapshot.paramMap.get('research');
     }
-  }
-
-  ngOnInit() {
   }
 
 }
