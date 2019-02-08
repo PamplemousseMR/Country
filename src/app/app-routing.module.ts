@@ -3,7 +3,7 @@ import {RouterModule, Routes} from '@angular/router';
 import {ResearchComponent} from './research/research.component';
 import {DetailComponent} from './detail/detail.component';
 import {HomeComponent} from './generic/home/home.component';
-import {DeadlinkComponent} from './generic/deadlink/deadlink.component';
+import { DeadlinkViewComponent } from './deadlink-view/deadlink-view.component';
 
 const routes: Routes = [
   {path: '', redirectTo: "/home", pathMatch: 'full'},
@@ -11,8 +11,8 @@ const routes: Routes = [
   {path: 'research', component: ResearchComponent},
   {path: 'research/:selected/:research', component: ResearchComponent},
   {path: 'detail/:name', component: DetailComponent},
-  {path: 'not-found', component: DeadlinkComponent},
-  {path: '**', redirectTo: 'not-found'}
+  {path: 'deadlink', component: DeadlinkViewComponent},
+  {path: '**', redirectTo: 'deadlink'}
 ];
 
 @NgModule({

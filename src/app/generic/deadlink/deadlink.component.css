@@ -1,0 +1,21 @@
+.deadlink_container {
+    padding-top: 100px;
+}
+
+.deadlink_spacer {
+    flex: 1 1 auto;
+}
+
+.deadlink_title {
+    font-size: 50px;
+}
+
+
+.deadlink_subtitle {
+    font-size: 40px;
+}
+
+.deadlink_image {
+    margin-top: 200px;
+    width: 500px;
+}
