@@ -4,11 +4,12 @@ import {CountryDetail} from 'src/classes/countryDetail';
 import {ActivatedRoute} from '@angular/router';
 
 @Component({
-  selector: 'app-detail',
-  templateUrl: './detail.component.html',
-  styleUrls: ['./detail.component.css']
+  selector: 'app-detail-view',
+  templateUrl: './detail-view.component.html',
+  styleUrls: ['./detail-view.component.css']
 })
-export class DetailComponent implements OnInit {
+
+export class DetailViewComponent implements OnInit {
 
   private readonly m_KEYS: string[] = Object.keys(new CountryDetail);
   private m_country: CountryDetail;

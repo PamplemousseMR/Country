@@ -19,13 +19,12 @@ import {AppComponent} from './app.component';
 import {HeaderComponent} from './generic/header/header.component';
 import {MenuComponent} from './generic/menu/menu.component';
 import {HomeComponent} from './generic/home/home.component';
-import {ResearchComponent} from './research/research.component';
 import {FluxHeaderComponent} from './generic/flux-header/flux-header.component';
 import {FooterComponent} from './generic/footer/footer.component';
-import {DetailComponent} from './detail/detail.component';
 import {DeadlinkComponent} from './generic/deadlink/deadlink.component';
 import {DeadlinkViewComponent} from './deadlink-view/deadlink-view.component';
-import { ResearchViewComponent } from './research-view/research-view.component';
+import {ResearchViewComponent} from './research-view/research-view.component';
+import {DetailViewComponent} from './detail-view/detail-view.component';
 
 @NgModule({
   declarations: [
@@ -33,13 +32,12 @@ import { ResearchViewComponent } from './research-view/research-view.component';
     HeaderComponent,
     MenuComponent,
     HomeComponent,
-    ResearchComponent,
     FluxHeaderComponent,
     FooterComponent,
-    DetailComponent,
     DeadlinkComponent,
     DeadlinkViewComponent,
-    ResearchViewComponent
+    ResearchViewComponent,
+    DetailViewComponent
   ],
   imports: [
     BrowserModule,
