@@ -1,4 +1,4 @@
-import {Component, OnInit, Input} from '@angular/core';
+import {Component, Input, OnInit} from '@angular/core';
 
 @Component({
   selector: 'app-deadlink',
@@ -8,7 +8,7 @@ import {Component, OnInit, Input} from '@angular/core';
 
 export class DeadlinkComponent implements OnInit {
 
-  @Input() readonly m_img : string = "";
+  @Input() readonly m_img: string = '';
 
   constructor() {
   }

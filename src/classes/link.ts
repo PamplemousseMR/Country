@@ -1,6 +1,6 @@
 export class Link {
-  m_link: string = "";
-  m_icon: string = "";
+  m_link: string = '';
+  m_icon: string = '';
 
   constructor(_link: string, _icon: string) {
     this.m_link = _link;

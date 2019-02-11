@@ -8,7 +8,7 @@ import {Component, Input, OnInit} from '@angular/core';
 
 export class FluxHeaderComponent implements OnInit {
 
-  @Input() private readonly m_TITLE: string = "default";
+  @Input() private readonly m_TITLE: string = 'default';
 
   constructor() {
   }

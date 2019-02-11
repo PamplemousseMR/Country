@@ -24,7 +24,7 @@ import {FluxHeaderComponent} from './generic/flux-header/flux-header.component';
 import {FooterComponent} from './generic/footer/footer.component';
 import {DetailComponent} from './detail/detail.component';
 import {DeadlinkComponent} from './generic/deadlink/deadlink.component';
-import { DeadlinkViewComponent } from './deadlink-view/deadlink-view.component';
+import {DeadlinkViewComponent} from './deadlink-view/deadlink-view.component';
 
 @NgModule({
   declarations: [

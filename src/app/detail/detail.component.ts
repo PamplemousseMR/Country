@@ -2,7 +2,6 @@ import {Component, OnInit} from '@angular/core';
 import {RestcountriesService} from 'src/services/restcountries.service';
 import {CountryDetail} from 'src/classes/countryDetail';
 import {ActivatedRoute} from '@angular/router';
-import {FormGroup,} from '@angular/forms';
 
 @Component({
   selector: 'app-detail',

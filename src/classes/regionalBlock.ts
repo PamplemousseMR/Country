@@ -1,6 +1,6 @@
 export class RegionalBlock {
 
-  acronym: string = "";
-  name: string = "";
+  acronym: string = '';
+  name: string = '';
 
 }

@@ -19,10 +19,10 @@
           </mat-grid-tile>
           <mat-grid-tile>
             <mat-list role="list">
-              <mat-list-item role="listitem">region : 
+              <mat-list-item role="listitem">region :
                 <a mat-button routerLink="/research/region/{{m_country.region}}">{{m_country.region}}</a>
               </mat-list-item>
-              <mat-list-item role="listitem">subregion : 
+              <mat-list-item role="listitem">subregion :
                 <a mat-button routerLink="/research/subregion/{{m_country.subregion}}">{{m_country.subregion}}</a>
               </mat-list-item>
               <mat-list-item role="listitem">demonym : {{m_country.demonym}}</mat-list-item>
@@ -75,19 +75,29 @@
           </mat-list-item>
           <mat-list-item role="listitem">
             <div>currencies :</div>
-            <div *ngFor="let s of m_country.currencies; let i = index" class="detail_details"><div *ngIf="i>0">,</div>{{s.code}}: {{s.name}}({{s.symbol}})</div>
+            <div *ngFor="let s of m_country.currencies; let i = index" class="detail_details">
+              <div *ngIf="i>0">,</div>
+              <div>{{s.code}}: {{s.name}}({{s.symbol}})</div>
+            </div>
           </mat-list-item>
           <mat-list-item role="listitem">
             <div>regional blocks :</div>
-            <div *ngFor="let s of m_country.regionalBlocs; let i = index" class="detail_details"><div *ngIf="i>0">,</div>{{s.acronym}}: {{s.name}}</div>
+            <div *ngFor="let s of m_country.regionalBlocs; let i = index" class="detail_details">
+              <div *ngIf="i>0">,</div>{{s.acronym}}: {{s.name}}</div>
           </mat-list-item>
           <mat-list-item role="listitem">
             <div>languages :</div>
-            <div *ngFor="let s of m_country.languages; let i = index" class="detail_details"><div *ngIf="i>0">,</div>{{s.name}}({{s.nativeName}}, {{s.iso639_1}}, {{s.iso639_2}})</div>
+            <div *ngFor="let s of m_country.languages; let i = index" class="detail_details">
+              <div *ngIf="i>0">,</div>
+              <div>{{s.name}}({{s.nativeName}}, {{s.iso639_1}}, {{s.iso639_2}})</div>
+            </div>
           </mat-list-item>
           <mat-list-item role="listitem">
             <div>translations :</div>
-            <div class="detail_details">de: {{m_country.translations.de}}, es: {{m_country.translations.es}}, fr: {{m_country.translations.fr}}, ja: {{m_country.translations.ja}}, it: {{m_country.translations.it}}, br: {{m_country.translations.br}}, pt: {{m_country.translations.pt}}, nl: {{m_country.translations.nl}}, hr: {{m_country.translations.hr}}, fa: {{m_country.translations.fa}}</div>
+            <div class="detail_details">de: {{m_country.translations.de}}, es: {{m_country.translations.es}},
+              fr: {{m_country.translations.fr}}, ja: {{m_country.translations.ja}}, it: {{m_country.translations.it}},
+              br: {{m_country.translations.br}}, pt: {{m_country.translations.pt}}, nl: {{m_country.translations.nl}},
+              hr: {{m_country.translations.hr}}, fa: {{m_country.translations.fa}}</div>
           </mat-list-item>
         </mat-list>
       </mat-tab>
