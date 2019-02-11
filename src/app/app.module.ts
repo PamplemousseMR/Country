@@ -25,6 +25,7 @@ import {FooterComponent} from './generic/footer/footer.component';
 import {DetailComponent} from './detail/detail.component';
 import {DeadlinkComponent} from './generic/deadlink/deadlink.component';
 import {DeadlinkViewComponent} from './deadlink-view/deadlink-view.component';
+import { ResearchViewComponent } from './research-view/research-view.component';
 
 @NgModule({
   declarations: [
@@ -37,7 +38,8 @@ import {DeadlinkViewComponent} from './deadlink-view/deadlink-view.component';
     FooterComponent,
     DetailComponent,
     DeadlinkComponent,
-    DeadlinkViewComponent
+    DeadlinkViewComponent,
+    ResearchViewComponent
   ],
   imports: [
     BrowserModule,

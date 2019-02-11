@@ -4,12 +4,12 @@ import {Country} from 'src/classes/country';
 import {ActivatedRoute} from '@angular/router';
 
 @Component({
-  selector: 'app-research',
-  templateUrl: './research.component.html',
-  styleUrls: ['./research.component.css']
+  selector: 'app-research-view',
+  templateUrl: './research-view.component.html',
+  styleUrls: ['./research-view.component.css']
 })
 
-export class ResearchComponent implements OnInit {
+export class ResearchViewComponent implements OnInit {
 
   private readonly m_KEYS: string[] = Object.keys(new Country);
   private m_selected: string = this.m_KEYS[0];
