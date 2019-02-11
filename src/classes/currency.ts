@@ -4,4 +4,8 @@ export class Currency {
   name: string = '';
   symbol: string = ''
 
+  public toString(): string {
+    return this.code + ': ' + this.name + '(' + this.symbol + ')';
+  }
+
 }
