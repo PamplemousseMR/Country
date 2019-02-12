@@ -76,7 +76,7 @@
           </mat-list-item>
           <mat-list-item role="listitem">
             <div>Borders :</div>
-            <a (click)="redirect(s)" *ngFor="let s of m_country.borders" mat-button>{{s}}</a>
+            <a mat-button *ngFor="let s of m_country.borders" routerLink="/detail/{{s}}">{{s}}</a>
           </mat-list-item>
           <mat-list-item role="listitem">
             <div>Regional blocks :</div>

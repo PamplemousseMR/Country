@@ -1,7 +1,7 @@
 import {Component, OnInit} from '@angular/core';
 import {RestcountriesService} from 'src/services/restcountries.service';
 import {Country} from 'src/classes/country';
-import {ActivatedRoute} from '@angular/router';
+import {ActivatedRoute, NavigationEnd, Router} from '@angular/router';
 
 @Component({
   selector: 'app-detail-view',
@@ -14,19 +14,20 @@ export class DetailViewComponent implements OnInit {
   private readonly m_KEYS: string[] = Object.keys(new Country);
   private m_country: Country;
 
-  constructor(private m_restcountries: RestcountriesService, private m_route: ActivatedRoute) {
+  constructor(private m_restcountries: RestcountriesService, private m_route: ActivatedRoute, private m_router: Router) {
   }
 
   ngOnInit() {
     this.m_restcountries.getCountry(this.m_route.snapshot.paramMap.get('code')).subscribe(
       d => this.m_country = d
     );
-  }
-
-  redirect(_code: string) {
-    this.m_restcountries.getCountry(_code).subscribe(
-      d => this.m_country = d
-    );
+    this.m_router.events.subscribe((_val) => {
+      if(_val instanceof NavigationEnd) {
+        this.m_restcountries.getCountry(this.m_route.snapshot.paramMap.get('code')).subscribe(
+          d => this.m_country = d
+        );
+      } 
+    });
   }
 
 }
