@@ -1,6 +1,6 @@
 import {Component, OnInit} from '@angular/core';
 import {RestcountriesService} from 'src/services/restcountries.service';
-import {CountryDetail} from 'src/classes/countryDetail';
+import {Country} from 'src/classes/country';
 import {ActivatedRoute} from '@angular/router';
 
 @Component({
@@ -11,14 +11,14 @@ import {ActivatedRoute} from '@angular/router';
 
 export class DetailViewComponent implements OnInit {
 
-  private readonly m_KEYS: string[] = Object.keys(new CountryDetail);
-  private m_country: CountryDetail;
+  private readonly m_KEYS: string[] = Object.keys(new Country);
+  private m_country: Country;
 
   constructor(private m_restcountries: RestcountriesService, private m_route: ActivatedRoute) {
   }
 
   ngOnInit() {
-    this.m_restcountries.getCountry(this.m_route.snapshot.paramMap.get('name')).subscribe(
+    this.m_restcountries.getCountry(this.m_route.snapshot.paramMap.get('code')).subscribe(
       d => this.m_country = d
     );
   }

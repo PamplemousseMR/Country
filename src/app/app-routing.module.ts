@@ -10,7 +10,7 @@ const routes: Routes = [
   {path: 'home', component: HomeComponent},
   {path: 'research', component: ResearchViewComponent},
   {path: 'research/:selected/:research', component: ResearchViewComponent},
-  {path: 'detail/:name', component: DetailViewComponent},
+  {path: 'detail/:code', component: DetailViewComponent},
   {path: 'deadlink', component: DeadlinkViewComponent},
   {path: '**', redirectTo: 'deadlink'}
 ];

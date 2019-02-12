@@ -2,7 +2,29 @@
   <mat-toolbar class="research_research">
     <mat-form-field class="research_selector">
       <mat-select [(value)]="m_selected" placeholder="Research by">
-        <mat-option *ngFor="let k of m_KEYS" value="{{k}}">{{k}}</mat-option>
+        <mat-option value="name">name</mat-option>
+        <mat-option value="capital">capital</mat-option>
+        <mat-option value="alpha2Code">alpha2Code</mat-option>
+        <mat-option value="alpha3Code">alpha3Code</mat-option>
+        <mat-option value="region">region</mat-option>
+        <mat-option value="subregion">subregion</mat-option>
+        <mat-option value="population">population</mat-option>
+        <mat-option value="demonym">demonym</mat-option>
+        <mat-option value="area">area</mat-option>
+        <mat-option value="gini">gini</mat-option>
+        <mat-option value="nativeName">native name</mat-option>
+        <mat-option value="numericCode">numeric code</mat-option>
+        <mat-option value="cioc">cioc</mat-option>
+        <mat-option value="topLevelDomain">top level domain</mat-option>
+        <mat-option value="callingCodes">calling codes</mat-option>
+        <mat-option value="altSpellings">alt spellings</mat-option>
+        <mat-option value="latlng">latitude/longitude</mat-option>
+        <mat-option value="timezones">timezones</mat-option>
+        <mat-option value="borders">borders</mat-option>
+        <mat-option value="currencies">currencies</mat-option>
+        <mat-option value="languages">languages</mat-option>
+        <mat-option value="translations">translations</mat-option>
+        <mat-option value="regionalBlocs">regional blocs</mat-option>
       </mat-select>
     </mat-form-field>
     <mat-form-field appearance="legacy" class="research_input">
@@ -17,7 +39,7 @@
         <mat-card class="example-card">
           <mat-card-header>
             <mat-card-title><a mat-button routerLink="/detail/{{c.alpha3Code}}">{{c.name}}</a></mat-card-title>
-            <mat-card-subtitle *ngIf="m_selected !== m_KEYS[0]" class="research_subtitle">{{m_selected}} : {{c[m_selected]}}</mat-card-subtitle>
+            <mat-card-subtitle *ngIf="m_selected !== 'name'" class="research_subtitle">{{m_selected}} : {{c[m_selected].toString()}}</mat-card-subtitle>
           </mat-card-header>
         </mat-card>
       </div>

@@ -1,11 +1,11 @@
 export class Currency {
 
-  code: string = '';
   name: string = '';
-  symbol: string = ''
+  code: string = '';
+  symbol: string = '';
 
   public toString(): string {
-    return this.code + ': ' + this.name + '(' + this.symbol + ')';
+    return this.name + ': ' + this.code + '(' + this.symbol + ')';
   }
 
 }

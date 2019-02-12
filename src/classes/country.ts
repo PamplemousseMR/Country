@@ -1,3 +1,9 @@
+import {Currency} from './currency';
+import {Language} from './language';
+import {Translations} from './translations';
+import {RegionalBlock} from './regionalBlock';
+import {Type} from "class-transformer";
+
 export class Country {
 
   name: string = '';
@@ -13,5 +19,28 @@ export class Country {
   nativeName: string = '';
   numericCode: string = '';
   cioc: string = '';
-
+  topLevelDomain: string [];
+  callingCodes: string [];
+  altSpellings: string [];
+  latlng: number [];
+  timezones: string [];
+  borders: string[];
+  @Type(
+    ()  => Currency
+  )
+  currencies: Currency [];
+  @Type(
+    ()  => Language
+  )
+  languages: Language [];
+  @Type(
+    ()  => Translations
+  )
+  translations: Translations;
+  @Type(
+    ()  => RegionalBlock
+  )
+  regionalBlocs: RegionalBlock [];
+  flag: string = "";
+  
 }
