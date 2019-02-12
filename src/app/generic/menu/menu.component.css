@@ -6,3 +6,7 @@
 .menu_spacer {
   flex: 1 1 auto;
 }
+
+::ng-deep .menu_button {
+  font-size: 13px;
+}
