@@ -67,5 +67,11 @@ export class AppModule {
     matIconRegistry.addSvgIcon("github", domSanitizer.bypassSecurityTrustResourceUrl('./assets/github.svg'));
     matIconRegistry.addSvgIcon("linkedin", domSanitizer.bypassSecurityTrustResourceUrl('./assets/linkedin.svg'));
     matIconRegistry.addSvgIcon("earth", domSanitizer.bypassSecurityTrustResourceUrl('./assets/earth.svg'));
+    matIconRegistry.addSvgIcon("africa", domSanitizer.bypassSecurityTrustResourceUrl('./assets/africa.svg'));
+    matIconRegistry.addSvgIcon("americas", domSanitizer.bypassSecurityTrustResourceUrl('./assets/americas.svg'));
+    matIconRegistry.addSvgIcon("asia", domSanitizer.bypassSecurityTrustResourceUrl('./assets/asia.svg'));
+    matIconRegistry.addSvgIcon("europe", domSanitizer.bypassSecurityTrustResourceUrl('./assets/europe.svg'));
+    matIconRegistry.addSvgIcon("oceania", domSanitizer.bypassSecurityTrustResourceUrl('./assets/oceania.svg'));
+
   }
 }
