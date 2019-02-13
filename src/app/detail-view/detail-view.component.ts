@@ -11,8 +11,7 @@ import {ActivatedRoute, NavigationEnd, Router} from '@angular/router';
 
 export class DetailViewComponent implements OnInit {
 
-  private readonly m_KEYS: string[] = Object.keys(new Country);
-  private m_country: Country;
+  public m_country: Country;
 
   constructor(private m_restcountries: RestcountriesService, private m_route: ActivatedRoute, private m_router: Router) {
   }

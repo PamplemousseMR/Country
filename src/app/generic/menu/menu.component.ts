@@ -9,8 +9,8 @@ import {Link} from 'src/classes/link';
 
 export class MenuComponent implements OnInit {
 
-  @Input() private readonly m_LOCALROUTES: Link[];
-  @Input() private readonly m_EXTERNALLINKS: Link[];
+  @Input() public readonly m_LOCALROUTES: Link[];
+  @Input() public readonly m_EXTERNALLINKS: Link[];
 
   constructor() {
   }

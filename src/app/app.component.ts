@@ -10,7 +10,7 @@ import {Router} from '@angular/router';
 
 export class AppComponent {
 
-  private readonly m_LOCALROUTES: Link[] = [new Link('/home', 'home', 'home'),
+  public readonly m_LOCALROUTES: Link[] = [new Link('/home', 'home', 'home'),
     new Link('/research', 'earth', 'research'),
     new Link('/research/region/Asia', 'asia', 'asia'),
     new Link('/research/region/Europe', 'europe', 'europe'),
@@ -21,10 +21,10 @@ export class AppComponent {
     new Link('/research/currencies/USD', 'usd', 'usd'),
     new Link('/research/currencies/Yen', 'yen', 'yen')];
 
-  private readonly m_EXTERNALLINKS: Link[] = [new Link('https://github.com/PamplemousseMR', 'github', 'github'),
+  public readonly m_EXTERNALLINKS: Link[] = [new Link('https://github.com/PamplemousseMR', 'github', 'github'),
     new Link('https://fr.linkedin.com/in/romain-manciaux-21989810a', 'linkedin', 'linkedin')];
 
-  constructor(private i_router: Router) {
+  constructor(public i_router: Router) {
   }
 
 }

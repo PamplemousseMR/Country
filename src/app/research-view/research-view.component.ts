@@ -11,9 +11,9 @@ import {ActivatedRoute, Router, NavigationEnd} from '@angular/router';
 
 export class ResearchViewComponent implements OnInit {
 
-  private m_selected: string = 'name';
-  private m_research: string = '';
-  private m_objects: Country[];
+  public m_selected: string = 'name';
+  public m_research: string = '';
+  public m_objects: Country[];
 
   constructor(private m_restcountries: RestcountriesService, private m_route: ActivatedRoute, private m_router: Router) {
   }
