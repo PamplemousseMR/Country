@@ -16,7 +16,10 @@ export class AppComponent {
     new Link('/research/region/Europe', 'europe', 'europe'),
     new Link('/research/region/Africa', 'africa', 'africa'),
     new Link('/research/region/Oceania', 'oceania', 'oceania'),
-    new Link('/research/region/Americas', 'americas', 'americas')];
+    new Link('/research/region/Americas', 'americas', 'americas'),
+    new Link('/research/currencies/Euro', 'euro', 'euro'),
+    new Link('/research/currencies/USD', 'usd', 'usd'),
+    new Link('/research/currencies/Yen', 'yen', 'yen')];
 
   private readonly m_EXTERNALLINKS: Link[] = [new Link('https://github.com/PamplemousseMR', 'github', 'github'),
     new Link('https://fr.linkedin.com/in/romain-manciaux-21989810a', 'linkedin', 'linkedin')];

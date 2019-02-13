@@ -74,6 +74,8 @@ export class AppModule {
     matIconRegistry.addSvgIcon("asia", domSanitizer.bypassSecurityTrustResourceUrl('./assets/asia.svg'));
     matIconRegistry.addSvgIcon("europe", domSanitizer.bypassSecurityTrustResourceUrl('./assets/europe.svg'));
     matIconRegistry.addSvgIcon("oceania", domSanitizer.bypassSecurityTrustResourceUrl('./assets/oceania.svg'));
-
+    matIconRegistry.addSvgIcon("yen", domSanitizer.bypassSecurityTrustResourceUrl('./assets/yen.svg'));
+    matIconRegistry.addSvgIcon("euro", domSanitizer.bypassSecurityTrustResourceUrl('./assets/euro.svg'));
+    matIconRegistry.addSvgIcon("usd", domSanitizer.bypassSecurityTrustResourceUrl('./assets/usd.svg'));
   }
 }
