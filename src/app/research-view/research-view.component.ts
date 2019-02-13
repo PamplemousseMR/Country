@@ -32,7 +32,7 @@ export class ResearchViewComponent implements OnInit {
           this.m_selected = this.m_route.snapshot.paramMap.get('selected');
           this.m_research = this.m_route.snapshot.paramMap.get('research');
         }
-      } 
+      }
     });
   }
 

@@ -2,7 +2,7 @@ import {Currency} from './currency';
 import {Language} from './language';
 import {Translations} from './translations';
 import {RegionalBlock} from './regionalBlock';
-import {Type} from "class-transformer";
+import {Type} from 'class-transformer';
 
 export class Country {
 
@@ -41,6 +41,6 @@ export class Country {
     ()  => RegionalBlock
   )
   regionalBlocs: RegionalBlock [];
-  flag: string = "";
-  
+  flag: string = '';
+
 }

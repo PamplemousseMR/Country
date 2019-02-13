@@ -1,6 +1,6 @@
 import {BrowserModule, DomSanitizer} from '@angular/platform-browser';
 import {NgModule} from '@angular/core';
-import {FormsModule} from "@angular/forms";
+import {FormsModule} from '@angular/forms';
 import {HttpClientModule} from '@angular/common/http';
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 import {MatToolbarModule} from '@angular/material/toolbar';
@@ -64,18 +64,18 @@ import {DetailViewComponent} from './detail-view/detail-view.component';
 
 export class AppModule {
   constructor(matIconRegistry: MatIconRegistry, domSanitizer: DomSanitizer) {
-    matIconRegistry.addSvgIcon("home", domSanitizer.bypassSecurityTrustResourceUrl('./assets/home.svg'));
-    matIconRegistry.addSvgIcon("search", domSanitizer.bypassSecurityTrustResourceUrl('./assets/search.svg'));
-    matIconRegistry.addSvgIcon("github", domSanitizer.bypassSecurityTrustResourceUrl('./assets/github.svg'));
-    matIconRegistry.addSvgIcon("linkedin", domSanitizer.bypassSecurityTrustResourceUrl('./assets/linkedin.svg'));
-    matIconRegistry.addSvgIcon("earth", domSanitizer.bypassSecurityTrustResourceUrl('./assets/earth.svg'));
-    matIconRegistry.addSvgIcon("africa", domSanitizer.bypassSecurityTrustResourceUrl('./assets/africa.svg'));
-    matIconRegistry.addSvgIcon("americas", domSanitizer.bypassSecurityTrustResourceUrl('./assets/americas.svg'));
-    matIconRegistry.addSvgIcon("asia", domSanitizer.bypassSecurityTrustResourceUrl('./assets/asia.svg'));
-    matIconRegistry.addSvgIcon("europe", domSanitizer.bypassSecurityTrustResourceUrl('./assets/europe.svg'));
-    matIconRegistry.addSvgIcon("oceania", domSanitizer.bypassSecurityTrustResourceUrl('./assets/oceania.svg'));
-    matIconRegistry.addSvgIcon("yen", domSanitizer.bypassSecurityTrustResourceUrl('./assets/yen.svg'));
-    matIconRegistry.addSvgIcon("euro", domSanitizer.bypassSecurityTrustResourceUrl('./assets/euro.svg'));
-    matIconRegistry.addSvgIcon("usd", domSanitizer.bypassSecurityTrustResourceUrl('./assets/usd.svg'));
+    matIconRegistry.addSvgIcon('home', domSanitizer.bypassSecurityTrustResourceUrl('./assets/home.svg'));
+    matIconRegistry.addSvgIcon('search', domSanitizer.bypassSecurityTrustResourceUrl('./assets/search.svg'));
+    matIconRegistry.addSvgIcon('github', domSanitizer.bypassSecurityTrustResourceUrl('./assets/github.svg'));
+    matIconRegistry.addSvgIcon('linkedin', domSanitizer.bypassSecurityTrustResourceUrl('./assets/linkedin.svg'));
+    matIconRegistry.addSvgIcon('earth', domSanitizer.bypassSecurityTrustResourceUrl('./assets/earth.svg'));
+    matIconRegistry.addSvgIcon('africa', domSanitizer.bypassSecurityTrustResourceUrl('./assets/africa.svg'));
+    matIconRegistry.addSvgIcon('americas', domSanitizer.bypassSecurityTrustResourceUrl('./assets/americas.svg'));
+    matIconRegistry.addSvgIcon('asia', domSanitizer.bypassSecurityTrustResourceUrl('./assets/asia.svg'));
+    matIconRegistry.addSvgIcon('europe', domSanitizer.bypassSecurityTrustResourceUrl('./assets/europe.svg'));
+    matIconRegistry.addSvgIcon('oceania', domSanitizer.bypassSecurityTrustResourceUrl('./assets/oceania.svg'));
+    matIconRegistry.addSvgIcon('yen', domSanitizer.bypassSecurityTrustResourceUrl('./assets/yen.svg'));
+    matIconRegistry.addSvgIcon('euro', domSanitizer.bypassSecurityTrustResourceUrl('./assets/euro.svg'));
+    matIconRegistry.addSvgIcon('usd', domSanitizer.bypassSecurityTrustResourceUrl('./assets/usd.svg'));
   }
 }

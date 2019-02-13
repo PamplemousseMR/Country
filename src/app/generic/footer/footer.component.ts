@@ -7,7 +7,7 @@ import {Component, Input, OnInit} from '@angular/core';
 })
 export class FooterComponent implements OnInit {
 
-  @Input() public readonly m_NAME: String = 'default';
+  @Input() public readonly m_NAME: string = 'default';
 
   public readonly m_DATE: Date = new Date();
 

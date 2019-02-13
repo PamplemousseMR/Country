@@ -4,6 +4,8 @@
     "codelyzer"
   ],
   "rules": {
+    "typedef": true,
+    "variable-name": false,
     "array-type": false,
     "arrow-parens": false,
     "deprecation": {
@@ -20,6 +22,10 @@
       240
     ],
     "member-access": false,
+    "whitespace": [
+      false,
+      "check-branch"
+    ],
     "member-ordering": [
       true,
       {
@@ -41,10 +47,7 @@
       "trace"
     ],
     "no-empty": false,
-    "no-inferrable-types": [
-      true,
-      "ignore-params"
-    ],
+    "no-inferrable-types": false,
     "no-non-null-assertion": true,
     "no-redundant-jsdoc": true,
     "no-switch-case-fall-through": true,
@@ -60,7 +63,7 @@
       true,
       "single"
     ],
-    "trailing-comma": false,
+    "trailing-comma": true,
     "no-output-on-prefix": true,
     "use-input-property-decorator": true,
     "use-output-property-decorator": true,

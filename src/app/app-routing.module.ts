@@ -6,7 +6,7 @@ import {ResearchViewComponent} from './research-view/research-view.component';
 import { DetailViewComponent } from './detail-view/detail-view.component';
 
 const routes: Routes = [
-  {path: '', redirectTo: "/home", pathMatch: 'full'},
+  {path: '', redirectTo: '/home', pathMatch: 'full'},
   {path: 'home', component: HomeComponent},
   {path: 'research', component: ResearchViewComponent},
   {path: 'research/:selected/:research', component: ResearchViewComponent},

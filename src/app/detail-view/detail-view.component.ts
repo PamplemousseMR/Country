@@ -25,7 +25,7 @@ export class DetailViewComponent implements OnInit {
         this.m_restcountries.getCountry(this.m_route.snapshot.paramMap.get('code')).subscribe(
           d => this.m_country = d
         );
-      } 
+      }
     });
   }
 
