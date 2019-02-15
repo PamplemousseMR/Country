@@ -1,16 +1,24 @@
 .detail_card {
-    max-width: 600px;
-    margin: 40px;
-    margin-left: auto;
-    margin-right: auto;
-    z-index: 0;
-  }
-  
-  .detail_header {
-    margin-left: 60px;
-  }
-  
-  .detail_image {
-    max-width: 400px;
-    padding: 0 100px 0;
-  }
+  max-width: 600px;
+  margin: 40px;
+  margin-left: auto;
+  margin-right: auto;
+  z-index: 0;
+}
+
+.detail_header {
+  margin-left: 60px;
+}
+
+.detail_image {
+  max-width: 400px;
+  padding: 0 100px 0;
+}
+
+.detail_inline {
+  white-space: nowrap;
+}
+
+.detail_inline > * {
+  display: inline-block;
+}

@@ -16,8 +16,12 @@
               <mat-list-item role="listitem">Alpha 3 code : {{m_country.alpha3Code}}</mat-list-item>
               <mat-list-item role="listitem">Population : {{m_country.population}}</mat-list-item>
               <mat-list-item role="listitem">
-                <div>calling codes :</div>
-                <div *ngFor="let s of m_country.callingCodes">{{s}}</div>
+                <div class="detail_inline">
+                  <div>Calling codes :</div>
+                </div>
+                <div class="detail_inline">
+                  <div *ngFor="let s of m_country.callingCodes">{{s}}</div>
+                </div>
               </mat-list-item>
             </mat-list>
           </mat-grid-tile>
@@ -35,24 +39,44 @@
       <mat-tab label="Details">
         <mat-list role="list">
           <mat-list-item role="listitem">
-            <div>Top level domain :</div>
-            <a mat-button *ngFor="let s of m_country.topLevelDomain" routerLink="/research/topLevelDomain/{{m_country.topLevelDomain}}">{{s}}</a>
+            <div class="detail_inline">
+              <div>Top level domain :</div>
+            </div>
+            <div class="detail_inline">
+              <a mat-button *ngFor="let s of m_country.topLevelDomain" routerLink="/research/topLevelDomain/{{m_country.topLevelDomain}}">{{s}}</a>
+            </div>
           </mat-list-item>
           <mat-list-item role="listitem">
-            <div>Alt spellings :</div>
-            <a mat-button *ngFor="let s of m_country.altSpellings" routerLink="/research/altSpellings/{{s}}">{{s}}</a>
+            <div class="detail_inline">
+              <div>Alt spellings :</div>
+            </div>
+            <div class="detail_inline">
+              <a mat-button *ngFor="let s of m_country.altSpellings" routerLink="/research/altSpellings/{{s}}">{{s}}</a>
+            </div>
           </mat-list-item>
           <mat-list-item role="listitem">
-            <div>Currencies :</div>
-            <a mat-button *ngFor="let s of m_country.currencies" routerLink="/research/currencies/{{s.toString()}}">{{s.toString()}}</a>
+            <div class="detail_inline">
+              <div>Currencies :</div>
+            </div>
+            <div class="detail_inline">
+              <a mat-button *ngFor="let s of m_country.currencies" routerLink="/research/currencies/{{s.toString()}}">{{s.toString()}}</a>
+            </div>
           </mat-list-item>
           <mat-list-item role="listitem">
-            <div>Languages :</div>
-            <a mat-button *ngFor="let s of m_country.languages" routerLink="/research/languages/{{s.toString()}}">{{s.toString()}}</a>
+            <div class="detail_inline">
+              <div>Languages :</div>
+            </div>
+            <div class="detail_inline">
+              <a mat-button *ngFor="let s of m_country.languages" routerLink="/research/languages/{{s.toString()}}">{{s.toString()}}</a>
+            </div>
           </mat-list-item>
           <mat-list-item role="listitem">
-            <div>Translations :</div>
-            <div>{{m_country.translations.toString()}}</div>
+            <div class="detail_inline">
+              <div>Translations :</div>
+            </div>
+            <div class="detail_inline">
+              <div>{{m_country.translations.toString()}}</div>
+            </div>
           </mat-list-item>
         </mat-list>
       </mat-tab>
@@ -68,20 +92,36 @@
             <a mat-button routerLink="/research/subregion/{{m_country.subregion}}">{{m_country.subregion}}</a>
           </mat-list-item>
           <mat-list-item role="listitem">
-            <div>Latitude/longitude :</div>
-            <a mat-button *ngFor="let s of m_country.latlng" routerLink="/research/latlng/{{s.toString()}}">{{s.toString()}}</a>
+            <div class="detail_inline">
+              <div>Latitude/longitude :</div>
+            </div>
+            <div class="detail_inline">
+              <a mat-button *ngFor="let s of m_country.latlng" routerLink="/research/latlng/{{s.toString()}}">{{s.toString()}}</a>
+            </div>
           </mat-list-item>
           <mat-list-item role="listitem">
-            <div>Timezones :</div>
-            <a mat-button *ngFor="let s of m_country.timezones" routerLink="/research/timezones/{{s.toString()}}">{{s}}</a>
+            <div class="detail_inline">
+              <div>Timezones :</div>
+            </div>
+            <div class="detail_inline">
+              <a mat-button *ngFor="let s of m_country.timezones" routerLink="/research/timezones/{{s.toString()}}">{{s}}</a>
+            </div>
           </mat-list-item>
           <mat-list-item role="listitem">
-            <div>Borders :</div>
-            <a mat-button *ngFor="let s of m_country.borders" routerLink="/detail/{{s}}">{{s}}</a>
+            <div class="detail_inline">
+              <div>Borders :</div>
+            </div>
+            <div class="detail_inline">
+              <a mat-button *ngFor="let s of m_country.borders" routerLink="/detail/{{s}}">{{s}}</a>
+            </div>
           </mat-list-item>
           <mat-list-item role="listitem">
-            <div>Regional blocks :</div>
-            <a mat-button *ngFor="let s of m_country.regionalBlocs" routerLink="/research/regionalBlocs/{{s.toString()}}">{{s.toString()}}</a>
+            <div class="detail_inline">
+              <div>Regional blocks :</div>
+            </div>
+            <div class="detail_inline">
+              <a mat-button *ngFor="let s of m_country.regionalBlocs" routerLink="/research/regionalBlocs/{{s.toString()}}">{{s.toString()}}</a>
+            </div>
           </mat-list-item>
         </mat-list>
       </mat-tab>
