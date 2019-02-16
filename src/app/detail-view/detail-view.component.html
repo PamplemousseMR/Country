@@ -51,7 +51,7 @@
               <div>Alt spellings :</div>
             </div>
             <div class="detail_inline">
-              <a mat-button *ngFor="let s of m_country.altSpellings" routerLink="/research/altSpellings/{{s}}">{{s}}</a>
+              <div class="detail_inline" *ngFor="let s of m_country.altSpellings; let i = index"><div *ngIf="i>0" class="detail_inline">, </div>{{s}}</div>
             </div>
           </mat-list-item>
           <mat-list-item role="listitem">
