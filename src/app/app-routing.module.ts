@@ -3,7 +3,7 @@ import {RouterModule, Routes} from '@angular/router';
 import {HomeComponent} from './generic/home/home.component';
 import {DeadlinkViewComponent} from './deadlink-view/deadlink-view.component';
 import {ResearchViewComponent} from './research-view/research-view.component';
-import { DetailViewComponent } from './detail-view/detail-view.component';
+import {DetailViewComponent} from './detail-view/detail-view.component';
 
 const routes: Routes = [
   {path: '', redirectTo: '/home', pathMatch: 'full'},

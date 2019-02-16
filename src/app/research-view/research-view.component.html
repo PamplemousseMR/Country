@@ -1,7 +1,7 @@
 <div *ngIf="m_objects">
   <mat-toolbar class="research_research">
     <mat-form-field class="research_selector">
-      <mat-select [(value)]="m_selected" placeholder="Research by">
+      <mat-select [(value)]="m_selected" placeholder="Research by" (selectionChange)="applyFilter()">
         <mat-option value="name">name</mat-option>
         <mat-option value="capital">capital</mat-option>
         <mat-option value="alpha2Code">alpha2Code</mat-option>
@@ -29,20 +29,23 @@
     </mat-form-field>
     <mat-form-field appearance="legacy" class="research_input">
       <mat-label>Research</mat-label>
-      <input [(ngModel)]="m_research" matInput placeholder="{{m_selected}}">
+      <input (keyup)="applyFilter()" [(ngModel)]="m_research" matInput placeholder="{{m_selected}}">
       <mat-icon matSuffix svgIcon="search"></mat-icon>
     </mat-form-field>
   </mat-toolbar>
-  <div *ngIf="m_objects" class="research_panel">
-    <div *ngFor="let c of m_objects; let i = index">
-      <div *ngIf="c[m_selected] ? c[m_selected].toString().toLowerCase().includes(m_research.toLowerCase()) : false">
-        <mat-card class="example-card">
-          <mat-card-header>
-            <mat-card-title><a mat-button routerLink="/detail/{{c.alpha3Code}}">{{c.name}}</a></mat-card-title>
-            <mat-card-subtitle *ngIf="m_selected !== 'name'" class="research_subtitle">{{m_selected}} : {{c[m_selected].toString()}}</mat-card-subtitle>
-          </mat-card-header>
-        </mat-card>
-      </div>
-    </div>
+  <div *ngIf="m_filterObjects" class="research_panel">
+    <mat-table [dataSource]="m_filterObjects" matSort>
+      <ng-container matColumnDef="name">
+        <mat-header-cell *matHeaderCellDef mat-sort-header> Name </mat-header-cell>
+        <mat-cell *matCellDef="let row"><a mat-button routerLink="/detail/{{row.alpha3Code}}">{{row.name}}</a></mat-cell>
+      </ng-container>
+      <ng-container matColumnDef="detail">
+        <mat-header-cell *matHeaderCellDef mat-sort-header> {{m_selected == 'name' ? '' : 'Detail'}} </mat-header-cell>
+        <mat-cell *matCellDef="let row"> {{m_selected == 'name' ? '' : row[m_selected]}} </mat-cell>
+      </ng-container>
+      <mat-header-row *matHeaderRowDef="m_displayedColumns"></mat-header-row>
+      <mat-row *matRowDef="let row; columns: m_displayedColumns;"></mat-row>
+    </mat-table>
+    <mat-paginator [length]="m_length" [pageSize]="m_pageSize" [pageSizeOptions]="m_pageSizeOptions" (page)="m_pageEvent = $event; applyFilter()"></mat-paginator>
   </div>
 </div>
