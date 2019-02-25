@@ -51,7 +51,7 @@ export class ResearchViewComponent implements OnInit {
   }
 
   applyFilter() {
-    this.m_filterObjects = this.m_objects.filter(c => c[this.m_selected].toString() !== '' ? c[this.m_selected].toString().toLowerCase().includes(this.m_research.toLowerCase()) : false);
+    this.m_filterObjects = this.m_objects.filter(c => c[this.m_selected] ? c[this.m_selected].toString().toLowerCase().includes(this.m_research.toLowerCase()) : false);
     this.m_length = this.m_filterObjects.length;
     this.m_filterObjects = this.m_filterObjects.slice(this.m_pageEvent.pageIndex * this.m_pageEvent.pageSize, this.m_pageEvent.pageIndex * this.m_pageEvent.pageSize + this.m_pageEvent.pageSize);
   }
