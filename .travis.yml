@@ -1,24 +1,6 @@
 language: typescript
 sudo: false
-
-matrix:
-  include:
-    #==============================
-    #
-    #     osx 
-    #
-    #==============================
-
-    - os: osx
-      osx_image: xcode10
-
-    #==============================
-    #
-    #     linux 
-    #
-    #==============================
-    
-    - os: linux
+os: linux
 
 before_install:
   - eval
