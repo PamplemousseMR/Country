@@ -14,6 +14,13 @@ These instructions will get you a copy of the project up and running on your loc
 
 - [Angular](https://angular.io/) : Angular is a platform that makes it easy to build applications with the web.
 
+### Build
+
+```
+- npm install
+- ng serve --open
+```
+
 ### Use
 
 Header showing the name of the application.
