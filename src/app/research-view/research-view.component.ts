@@ -2,7 +2,7 @@ import {Component, OnInit} from '@angular/core';
 import {RestcountriesService} from 'src/services/restcountries.service';
 import {Country} from 'src/classes/country';
 import {ActivatedRoute, Router, NavigationEnd} from '@angular/router';
-import {PageEvent} from '@angular/material';
+import {PageEvent} from '@angular/material/paginator';
 
 @Component({
   selector: 'app-research-view',

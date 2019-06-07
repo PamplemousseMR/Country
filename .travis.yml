@@ -1,12 +1,11 @@
-language: typescript
-sudo: false
+language: node_js
+sudo: true
 os: linux
+dist: trusty
+node_js: "12"
 
 before_install:
   - eval
-
-before_script:
-  - npm install -g @angular/cli
   - npm install
 
 script:
