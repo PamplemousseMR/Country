@@ -1,0 +1,27 @@
+name: Build
+
+on:
+  push:
+    branches: [ master ]
+
+jobs:
+  build:
+    runs-on: ubuntu-20.04
+
+    steps:
+      - uses: actions/checkout@v2
+
+      - name: Package
+        run: |
+          if [ "$RUNNER_OS" == "Linux" ]; then
+              npm install -g @angular/cli
+              npm install
+          else
+              echo "$RUNNER_OS not supported"
+              exit 1
+          fi
+
+      - name: Build
+        run: |
+          ng build
+          ng lint

@@ -2,9 +2,9 @@
 
 Country, a GUI based on ANGULAR 6 allowing to search informations about countries.
 
-## Travis
+## CI
 
-[![Build Status](https://travis-ci.com/PamplemousseMR/Country.svg?branch=master)](https://travis-ci.com/PamplemousseMR/Country)
+![Build Status](https://github.com/PamplemousseMR/Country/actions/workflows/build.yml/badge.svg)
 
 ## Getting Started
 
